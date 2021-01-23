@@ -10,8 +10,10 @@
     "armado": "cp -r ../videojuegos-front/build/ public/",
     "dev": "react-scripts start",
     "start": "serve -s build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
