@@ -44,7 +44,7 @@ app.use(
   })
 );
 //Routes Setup
-app.use('/', indexRouter);
+// app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/api/category', require('./routes/category'));
 app.use('/api/torneovideogame', require('./routes/torneovideogame'));
