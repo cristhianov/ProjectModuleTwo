@@ -26,8 +26,8 @@ mongoose
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
-app.use(bodyParser.json({ limit: "30mb", extended: true })); //Limitara la carga de imagenes a 30mb
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true })); //Limitara la carga de imagenes a 30mb
+// app.use(bodyParser.json({ limit: "30mb", extended: true })); //Limitara la carga de imagenes a 30mb
+// app.use(bodyParser.urlencoded({ limit: "30mb", extended: true })); //Limitara la carga de imagenes a 30mb
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
