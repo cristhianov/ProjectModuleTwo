@@ -7,14 +7,14 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors"); //Sirve para transferir entre el back y el fornt
-const morgan = require("morgan");
-const bodyParser = require("body-parser");
+// const morgan = require("morgan");
+// const bodyParser = require("body-parser");
 const path = require("path");
 
 //Database Setup
 mongoose
   .connect(process.env.DB, {
-    useCreateIndex: true,
+    // useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -45,8 +45,8 @@ app.use(
   })
 );
 //Routes Setup
-// app.use('/', indexRouter);
-app.use("/user", usersRouter);
+app.use("/api", indexRouter);
+app.use("/api/user", usersRouter);
 app.use("/api/category", require("./routes/category"));
 app.use("/api/torneovideogame", require("./routes/torneovideogame"));
 app.use("/api/authCM", require("./routes/authCM"));
